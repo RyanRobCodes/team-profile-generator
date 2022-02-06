@@ -1,13 +1,12 @@
 const inquirer = require('inquirer');
 
-const Employee = require("./lib/Employee");
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
 
 const index = require("./index.js");
 const path = require("path");
-const { fs } = require('fs');
+const fs = require('fs');
 const OUTPUT_DIR = path.resolve(__dirname, "output")
 const outputPath = path.join(OUTPUT_DIR, "index.html");
 
@@ -18,24 +17,24 @@ const promptManager = () => {
         {
             type: 'input',
             name: 'name',
-            message: 'What is your name?'
+            message: 'Enter manager name?'
         },
         {
             type: 'input',
             name: 'employeeId',
-            message: 'What is your employee id number?'
+            message: 'Enter employee ID number'
 
         },
         {
             type: 'input',
             name: 'email',
-            message: 'What is your email address?',
+            message: 'Enter email address',
 
         },
         {
             type: 'input',
             name: 'officeNumber',
-            message: 'What is your office number?'
+            message: 'Enter office number?'
         }
 
     ]).then(answers => {
@@ -74,24 +73,24 @@ const promptEngineer = () => {
         {
             type: 'input',
             name: 'name',
-            message: 'What is your name?'
+            message: 'Enter engineer name'
         },
         {
             type: 'input',
             name: 'employeeId',
-            message: 'What is your employee id number?'
+            message: 'Enter employee id number'
 
         },
         {
             type: 'input',
             name: 'email',
-            message: 'What is your email address?',
+            message: 'Enter email address',
 
         },
         {
             type: 'input',
             name: 'github',
-            message: 'What is your github username?'
+            message: 'Enter github username?'
         }
 
     ]).then(answers => {
@@ -108,24 +107,24 @@ const promptIntern = () => {
         {
             type: 'input',
             name: 'name',
-            message: 'What is your name?'
+            message: 'Enter intern name'
         },
         {
             type: 'input',
             name: 'employeeId',
-            message: 'What is your employee id number?'
+            message: 'Enter employee id number'
 
         },
         {
             type: 'input',
             name: 'email',
-            message: 'What is your email address?',
+            message: 'Enter email address',
 
         },
         {
             type: 'input',
             name: 'school',
-            message: 'What is your school name?'
+            message: 'Enter school name'
         }
 
     ]).then(answers => {
